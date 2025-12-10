@@ -1,0 +1,41 @@
+=== Log Started at 2025-12-10 09:00:44.622451 ===
+2025-12-10 09:00:48,663 - [INFO] - [192.168.79.104] 开始执行任务...
+2025-12-10 09:00:48,663 - [INFO] - [192.168.79.104] 加载配置: 用户=[host], 待试登录密码数=[2], 待试Root密码数=[2]
+2025-12-10 09:00:48,664 - [INFO] - [192.168.79.104] 正在连接... (尝试第 1/2 个密码)
+2025-12-10 09:00:48,818 - [INFO] - [192.168.79.104] SSH 连接建立成功！
+2025-12-10 09:00:48,924 - [INFO] - [192.168.79.104] 登录成功，当前用户: host
+2025-12-10 09:00:48,924 - [INFO] - [192.168.79.104] 尝试 su 切换...
+2025-12-10 09:00:50,456 - [INFO] - [192.168.79.104] Root 切换成功
+2025-12-10 09:00:50,456 - [INFO] - [192.168.79.104] 执行 3 条命令...
+2025-12-10 09:00:50,457 - [INFO] - [192.168.79.104] >>> CMD: whoami
+2025-12-10 09:00:50,558 - [INFO] - [192.168.79.104] root
+
+[root@aqk-demo ~]#
+
+2025-12-10 09:00:50,558 - [INFO] - [192.168.79.104] >>> CMD: uptime
+2025-12-10 09:00:50,658 - [INFO] - [192.168.79.104] 08:56:19 up 130 days, 18:47,  4 users,  load average: 0.05, 0.05, 0.05
+
+[root@aqk-demo ~]#
+
+2025-12-10 09:00:50,659 - [INFO] - [192.168.79.104] >>> CMD: ls -l /tmp
+2025-12-10 09:00:50,760 - [INFO] - [192.168.79.104] 总用量 12
+drwxr-x--- 2 root root   18 8月   1 14:09 hsperfdata_root
+-rw-r----- 1 host host 2436 12月  5 17:33 passwd.bak
+drwx------ 2 host host   25 11月 27 09:13 ssh-4H0WPBvhPhDU
+drwx------ 2 root root   26 11月 28 09:19 ssh-WW2YoNK11oPf
+drwx------ 3 root root   17 8月   1 14:09 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-bolt.service-W10f8w
+drwx------ 3 root root   17 8月   1 14:09 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-colord.service-Msm0RU
+drwx------ 3 root root   17 8月   1 14:09 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-cups.service-eBPBJz
+drwx------ 3 root root   17 12月 10 08:56 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-fprintd.service-HTU9R6
+drwx------ 3 root root   17 11月 27 09:13 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-fwupd.service-ArztRN
+drwx------ 3 root root   17 8月   1 14:09 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-ntpd.service-AQcuRa
+drwx------ 3 root root   17 8月   1 14:09 systemd-private-2aa44ab8fbd745d9888f5248b9b595a1-rtkit-daemon.service-MpLLxX
+drwx------ 2 root root    6 11月 28 10:45 tmp.5es38OxMGl
+drwx------ 2 root root    6 12月  5 10:15 tracker-extract-files.0
+drwx------ 2 host host    6 12月  5 17:32 tracker-extract-files.1000
+-rw------- 1 root root 1149 11月 26 11:21 yum_save_tx.2025-11-26.11-21.qz3R34.yumtx
+-rw------- 1 root root  238 11月 28 09:44 yum_save_tx.2025-11-28.09-44.wuJjH7.yumtx
+
+[root@aqk-demo ~]#
+
+2025-12-10 09:00:50,760 - [INFO] - [192.168.79.104] ✅ 任务全部完成。
