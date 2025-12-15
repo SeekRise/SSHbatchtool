@@ -10,12 +10,12 @@ defaults:
   user: host
   # 默认登录密码列表（按顺序尝试）
   login_passwords:
-    - "12host!@"
-    - "Zh#86ji"
+    - "1234"
+    - "123"
   # 默认Root切换密码列表
   root_passwords:
-    - "Ro#x86ot"
-    - "Test#x86"
+    - "123"
+    - "12345"
   # SU 切换正则 (自动兼容中英文冒号)
   su_prompt_regex: "(Password|密码|password|Passwort).*?[:：]"
 
