@@ -28,22 +28,30 @@ LOG_FILE_NAME = os.path.join(BASE_DIR, "ssh_debug.log")
 
 DEFAULT_CONFIG_CONTENT = """# 全局配置文件
 settings:
-  max_host_limit: 500
-  max_threads: 20
-  timeout: 10
+  max_host_limit: 200     # 最大主机数
+  max_threads: 10         # 并发线程数
+  timeout: 10             # SSH连接超时(秒)
 
 defaults:
   ssh_port: 22
-  user: root
+  # 默认账户（若输入只有IP，将使用此用户）
+  user: host
+  # 默认登录密码列表（按顺序尝试）
   login_passwords:
+    - "12345"
     - "123456"
+  # 默认Root切换密码列表
   root_passwords:
-    - "root123"
+    - "1234523"
+    - "123452"
+  # SU 切换正则 (自动兼容中英文冒号)
   su_prompt_regex: "(Password|密码|password|Passwort).*?[:：]"
 
 commands:
+  # 只有成功获得 Root 权限后才会执行
   - "whoami"
   - "uptime"
+  - "date"
 """
 
 def setup_global_logging():
